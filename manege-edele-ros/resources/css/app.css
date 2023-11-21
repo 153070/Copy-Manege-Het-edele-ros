@@ -1,0 +1,63 @@
+.homeview-container {
+    min-width: 850px;
+}
+
+.header {
+    background-color: white;
+    min-width: 800px;
+}
+.navbar {
+    background-color: #7D5D2B;
+}
+.header-text {
+    color: #7D5D2B;
+}
+
+.main-content {
+    min-width: 800px;
+}
+.bar {
+    background-color: #7D5D2B;
+}
+.bar-row {
+    background-color: #D2C572;
+}
+
+.footer {
+    background-color: #7D5D2B;
+    min-width: 800px;
+    padding-top: 2rem;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.detail-page {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    padding: 30px 35px;
+}
+
+.detail-page h2 {
+    font-weight: 600;
+}
+
+.detail-page .lijn {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-page .lijn .een {
+    width: 150px;
+}
+
+.detail-page .lijn p {
+    font-size: 13pt;
+}
+
+.detail-page .titel {
+    margin-bottom: 40px;
+}
