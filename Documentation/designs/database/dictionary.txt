@@ -1,0 +1,71 @@
+
+agendas {
+	id bigint(20) pk increments
+	start_datum datetime
+	eind_datum datetime
+	lesdoel varchar(255)
+	soort enum('Les', 'Examen')
+	created_at timestamp null
+	updated_at timestamp null
+}
+
+agenda_users {
+	id bigint(20) pk increments
+	created_at timestamp null
+	updated_at timestamp null
+	agenda_id bigint(20) *>* agendas.id
+	user_id bigint(20) *>* users.id
+}
+
+users {
+	id bigint(20) pk increments > comments.user_id
+	name varchar(255)
+	adres varchar(255)
+	woonplaats varchar(255)
+	email varchar(255)
+	role enum('Leerling', 'Instructeur', 'Eigenaar')
+	email_verified_at timestamp null
+	password varchar(255)
+	remember_token integer null
+	created_at timestamp null
+	updated_at timestamp null
+}
+
+comments {
+	id bigint(20) pk increments
+	comment text
+	user_id integer(11)
+	agenda_id integer(11) >* agendas.id
+	created_at timestamp null
+	updated_at timestamp null
+}
+
+mededelingen {
+	id integer pk increments
+	mededeling text
+	created_at timestamp null
+	updated_at timestamp null
+}
+
+paarden {
+	id bigint(20) pk increments
+	naam integer(191)
+	leeftijd int(11)
+	geslacht enum('Man', 'Vrouw')
+	tamheid enum('Tam', 'Gemiddeld', 'Wild')
+	created_at timestamp null
+	updated_at timestamp null
+}
+
+inschrijven {
+	id bigint(20) pk increments
+	naam varchar(50)
+	adres varchar(100)
+	reden text
+	lespakket enum('10 Lessen', '20 Lessen', '30 Lessen')
+	email varchar(100) unique
+	leeftijd integer(3)
+	geslacht enum('Man', 'Vrouw')
+	telefoonnummer integer(11)
+}
+
